@@ -26,7 +26,7 @@ SECRET_KEY = 'nps=cl%(at96@r#rd5e#a3yub2_k41$1g==ok&u56#*@#w%mj1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['RehanShakoor.explorin.io']
 
 
 # Application definition
