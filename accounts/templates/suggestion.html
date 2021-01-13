@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            button{
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                color: ivory;
+                border: 2px solid #4CAF50;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+        $("#1").click(function(){
+        if (document.getElementById("1").innerHTML == "Follow") {
+            document.getElementById("1").innerHTML = "Unfollow";
+            document.getElementById("1").style.backgroundColor="red";
+        }   
+        else {
+            document.getElementById("1").innerHTML = "Follow";
+            document.getElementById("1").style.backgroundColor="#4CAF50";
+        }    
+        });
+        $("#2").click(function(){
+        if (document.getElementById("2").innerHTML == "Follow") {
+            document.getElementById("2").innerHTML = "Unfollow";
+            document.getElementById("2").style.backgroundColor="red";
+        }   
+        else {
+            document.getElementById("2").innerHTML = "Follow";
+            document.getElementById("2").style.backgroundColor="#4CAF50";
+        }    
+        });
+        $("#3").click(function(){
+        if (document.getElementById("3").innerHTML == "Follow") {
+            document.getElementById("3").innerHTML = "Unfollow";
+            document.getElementById("3").style.backgroundColor="red";
+        }   
+        else {
+            document.getElementById("3").innerHTML = "Follow";
+            document.getElementById("3").style.backgroundColor="#4CAF50";
+        }    
+        });
+        $("#4").click(function(){
+        if (document.getElementById("4").innerHTML == "Follow") {
+            document.getElementById("4").innerHTML = "Unfollow";
+            document.getElementById("4").style.backgroundColor="red";
+        }   
+        else {
+            document.getElementById("4").innerHTML = "Follow";
+            document.getElementById("4").style.backgroundColor="#4CAF50";
+        }    
+        });
+        $("#5").click(function(){
+        if (document.getElementById("5").innerHTML == "Follow") {
+            document.getElementById("5").innerHTML = "Unfollow";
+            document.getElementById("5").style.backgroundColor="red";
+        }   
+        else {
+            document.getElementById("5").innerHTML = "Follow";
+            document.getElementById("5").style.backgroundColor="#4CAF50";
+        }    
+        });
+
+        });
+        </script>
+        <title>Home Page</title>
+    </head>
+    <body>
+        {% block content %}
+         <img  style="margin-right:0px;margin-top : 10px; margin-bottom : 10px; width : 200px; border : 0px solid #eaecee; padding-right: 660px; padding-left: 660px;" src="/static/insta_text.png">
+         <p style=" margin-left : 320px;margin-right : 320px;border-radius: 20px ; border : 2px solid #000000; padding-top: 20px; padding-bottom: 20px; padding-right: 10px; padding-left: 5px;">
+            <a style="margin-left: 80px; background-color : #2196F3; color : white; font-size : 15px; text-decoration: none; padding-top: 8px; padding-right: 10px; padding-bottom: 8px; padding-left: 10px; word-spacing: 10px;" href="{% url 'home' %}">HOME</a>
+            <a style="margin-left: 100px; background-color : #2196F3; color : white; font-size : 15px; text-decoration: none; padding-top: 8px; padding-right: 10px; padding-bottom: 8px; padding-left: 10px; word-spacing: 10px;" href="{% url 'addpost' %}">ADD  POST</a>
+            <a style="margin-left: 100px; background-color : #2196F3; color : white; font-size : 15px; text-decoration: none; padding-top: 8px; padding-right: 10px; padding-bottom: 8px; padding-left: 10px; word-spacing: 10px;" href="{% url 'viewpost' %}">VIEW  POST</a>
+            <a style="margin-left: 100px; background-color : #2196F3; color : white; font-size : 15px; text-decoration: none; padding-top: 8px; padding-right: 10px; padding-bottom: 8px; padding-left: 10px; word-spacing: 10px;" href="{% url 'login' %}">LOGOUT</a>
+         </p>
+         <p style="margin-left: 320px;font-size : 35px; font-family: Garamond, monaco, fantasy;"><b style="border-bottom: 2px solid rgb(17, 17, 17);font-weight:300;">Friend Suggestions :-</b></p>
+         <div style="margin-left: 320px;margin-top:50px;border-radius: 15px ;border:2px solid black;margin-right: 825px;">
+         <ol>   
+         <li><p style="display:inline;font-size: 20px;">Ashutosh Kumar</p>
+         <button id="1" style="display:inline;cursor: pointer;margin-left: 60px;font-size: 15px;background-color:#4CAF50;">Follow</button></li>
+         <p></p>
+         <li><p style="display:inline;font-size: 20px;">Pradnesh Chavan</p>
+         <button id="2" style="display:inline;cursor: pointer;font-size: 15px;margin-left: 55px;background-color:#4CAF50;">Follow</button></li>
+         <p></p>
+         <li><p style="display:inline;font-size: 20px;">Ravi Kiran</p>
+         <button id="3" style="display:inline;cursor: pointer;font-size: 15px;margin-left: 105px;background-color:#4CAF50;">Follow</button></li>
+         <p></p>
+         <li><p style="display:inline;font-size: 20px;">Pranjal Minocha</p>
+         <button id="4" style="display:inline;cursor: pointer;font-size: 15px;margin-left: 60px;background-color:#4CAF50;">Follow</button></li>
+         <p></p>
+         <li><p style="display:inline;font-size: 20px;">Mohit Kumar</p>
+         <button id="5" style="display:inline;cursor: pointer;font-size: 15px;margin-left: 82px;background-color:#4CAF50;">Follow</button></li>
+         </ol>
+         </div>
+         <p style="font-size:30px; margin-left: 630px;font-weight: 300;margin-top:100px;"><b style="border-bottom: 2px solid rgb(17, 17, 17);font-weight:580;font-family: Garamond, monaco, fantasy;">Special thanks to :</b></p>
+         <img style="border:3px solid black; border-radius:10px ; padding:10px ;margin-top:5px;margin-bottom:10px;margin-left: 632px; width:200px; height:50px;"src="/static/explogo.jpg">
+         <hr style="margin-left: 320px;margin-right: 320px;height:1.5px;color:#000000;margin-top:30px;background-color:rgb(0, 0, 0)"> 
+        {% endblock %} 
+    </body>
+</html>
+
+

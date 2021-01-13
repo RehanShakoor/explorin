@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Post</title>
+    </head>
+    <body>
+        {% block content %}
+            <img  style="margin-right:0px;margin-top : 10px; margin-bottom : 10px; width : 200px; border : 0px solid #eaecee; padding-right: 660px; padding-left: 660px;" src="/static/insta_text.png">
+            <p style="border-radius: 20px; margin-left : 320px;margin-right : 320px; border : 2px solid #000000; padding-top: 20px; padding-bottom: 20px; padding-right: 10px; padding-left: 5px;">
+            <a style="border-radius: 5px; margin-left: 80px; background-color : #2196F3; color : white; font-size : 15px; text-decoration: none; padding-top: 8px; padding-right: 10px; padding-bottom: 8px; padding-left: 10px; word-spacing: 10px;" href="{% url 'home' %}">HOME</a>
+            <a style="border-radius: 5px; margin-left: 100px; background-color : #2196F3; color : white; font-size : 15px; text-decoration: none; padding-top: 8px; padding-right: 10px; padding-bottom: 8px; padding-left: 10px; word-spacing: 10px;" href="{% url 'addpost' %}">ADD  POST</a>
+            <a style="border-radius: 5px; margin-left: 100px; background-color : #2196F3; color : white; font-size : 15px; text-decoration: none; padding-top: 8px; padding-right: 10px; padding-bottom: 8px; padding-left: 10px; word-spacing: 10px;" href="{% url 'viewpost' %}">VIEW  POST</a>
+            <a style="border-radius: 5px; margin-left: 100px; background-color : #2196F3; color : white; font-size : 15px; text-decoration: none; padding-top: 8px; padding-right: 10px; padding-bottom: 8px; padding-left: 10px; word-spacing: 10px;" href="{% url 'login' %}">LOGOUT</a>
+            </p>
+            <form style=" border : 2px solid #000000;border-radius: 20px ;margin-left: 320px;margin-right: 320px; padding-left: 100px;" action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <p style="font-size : 30px; font-family: Garamond, monaco, cursive;"><b style="border-bottom: 2px solid rgb(17, 17, 17);font-weight:300;">Add New Post</b></p>
+                <p style="margin-bottom: 30px;"><label style="font-size : 25px;"for="id_title">Title : </label><br>
+                <input style="margin-top: 10px;font-size: 20px;" size="59" type="text" name="title" maxlength="255" required id="id_title"></p>
+                <p style="margin-bottom: 30px;"><label style="font-size : 25px;"for="id_photo">Image : </label> 
+                <input style="font-size: 15px;"  type="file" name="photo" accept="image/*" id="id_photo"></p>
+                <p style="margin-bottom: 55px;"><label style="font-size : 25px; margin-bottom: 50px;" for="id_body">Description : </label><br>
+                <textarea style="font-size: 20px;margin-top: 10px;text-align: left; " name="body" cols="57" rows="6" required id="id_body">
+                </textarea></p>
+                <input style="margin-bottom: 20px; font-size: 20px; border-color :#2196F3; background-color : #2196F3; color : white; font-size : 15px; text-decoration: none; padding-top: 8px; padding-right: 10px; padding-bottom: 8px; padding-left: 10px; word-spacing: 10px;" type="submit"  value="Upload">
+            </form>
+            <p style="font-size:30px; margin-left: 630px;font-weight: 300;margin-top:30px;"><b style="border-bottom: 2px solid rgb(17, 17, 17);font-weight:580;font-family: Garamond, monaco, fantasy;">Special thanks to :</b></p>
+            <img style="border:3px solid black; border-radius:10px ; padding:10px ;margin-top:5px;margin-bottom:10px;margin-left: 632px; width:200px; height:50px;"src="/static/explogo.jpg">
+            <hr style="margin-left: 320px;margin-right: 320px;height:1.5px;color:#000000;margin-top:30px;background-color:rgb(0, 0, 0)"> 
+        {% endblock %}
+    </body>
+</html>

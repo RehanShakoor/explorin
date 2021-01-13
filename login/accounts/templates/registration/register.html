@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     <title>Login Page</title>
+    </head>
+    <body>
+        {% block content %}
+            <img style="margin-left : 550px; margin-top : 100px; margin-bottom : 50px; width : 400px;"src="/static/instagram-logo.png">
+            <form method="POST">
+                {% csrf_token %}
+                <input style="font-size: 25px; margin-left : 560px; margin-top: 0px;" size="25" placeholder="username" type="text" name="username" maxlength="150" autocapitalize="none" autocomplete="username" autofocus required id="id_username"><br><br>
+                <input style="font-size: 25px; margin-left : 560px; margin-top: 30px;" size="25" type="password" name="password1" autocomplete="new-password" required id="id_password1" placeholder="password"><br><br>
+                <input style="font-size: 25px; margin-left : 560px; margin-top: 30px;" size="25" type="password" name="password2" autocomplete="new-password" required id="id_password2" placeholder="re enter password"><br><br>
+                <button style="margin-left: 560px; margin-top: 50px; background-color : #2196F3; color : white; font-size : 25px; border : 2px solid #2196F3; text-decoration: none; padding-top: 12px; padding-right: 142px; padding-bottom: 12px; padding-left: 142px; font-family: 'Overpass Mono', monospace;">Sign Up</button>
+            </form>   
+        {% endblock %}   
+    </body>
+</html>
+
+
+

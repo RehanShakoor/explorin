@@ -1,0 +1,23 @@
+<h1>Post</h1>
+<ul>
+{% for post in object_list %}
+    <li>{{ post.title }} - {{ post.author}}<br/>
+    {{ post.body }}</li>
+{% endfor %}
+</ul>
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>View Post</title>
+    </head>
+    <body>
+        {% block content %}
+            {% for x in img %}
+             <img src="{{x.photo.url}}">
+            {% endfor %}
+        {% endblock %}
+    </body>
+</html>
+
